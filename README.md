@@ -61,3 +61,29 @@ Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&ut
 # Notes
 
 `blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+
+
+
+
+
+
+`npx create-next-app --example blog-starter blog-starter-app`
+
+https://nextjs.org/docs/app/building-your-application/deploying/static-exports -> next.config.js 파일 제일 바깥에 생성 -> 코드 복사 붙여넣기
+
+->npm run build -> 밑에 코드로 수정
+
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+    output: 'export',
+    distDir: 'dist',
+    images: {
+        unoptimized: true,
+    }
+}
+
+module.exports = nextConfig
+
+-> 다시 npm run build 
