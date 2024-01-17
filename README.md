@@ -87,3 +87,6 @@ const nextConfig = {
 module.exports = nextConfig
 
 -> 다시 npm run build 
+
+- name: Static HTML export with Next.js
+        run: ${{ steps.detect-package-manager.outputs.runner }} next export
